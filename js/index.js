@@ -62,3 +62,12 @@ $('#box li').add('#box section').hover(function(){
 },function(){
 	autoPlay();
 });
+
+/*
+ * 想一想，我们的轮播图能封装成插件吗？会产生什么问题
+ * 1，插件中最好不要使用 id .原因：插件是能够被重复使用的，也就是说在同一个页面中可能会多次使用这个插件造成冲突
+ * 2，变量的命名和方法的命名有可能和自己写的js文件的命名冲突
+ * 3，标签 class 的值的问题：prev，next 这些 class 太大众化了 势必起冲突
+ * 4，插件文件名命名问题：index.js  index.css 命名大众化  比如这样修改：jQuery.ZYSlide.js
+ * 
+ */
